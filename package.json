@@ -1,6 +1,6 @@
 {
   "name": "@akordi/jtab",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Javascript module to render Guitar tabs and chords. Forked from http://jtab.tardate.com/",
   "main": "src/index.js",
   "scripts": {
