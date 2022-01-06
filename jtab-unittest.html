@@ -13,8 +13,6 @@
     <!-- START: for jtab -->
     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
     <link type="text/css" rel="stylesheet" href="css/jtab-helper.css"/>
-    <script src="node_modules/jquery/dist/jquery.min.js" type="text/javascript"></script>
-    <script src="node_modules/raphael/raphael.min.js" type="text/javascript"></script>
     <script src="dist/jtab.js" type="text/javascript"></script>
     <!-- END: for jtab -->
   </head>
@@ -55,29 +53,29 @@
 
     testRaphaelGetStringNumber: function() {  with(this) {
       var token = "$1"; var expected = 1;
-      assertEqual( expected, Raphael.fn.get_string_number(token), "incorrect string number for: '" + token + "'" );
+      assertEqual( expected, jtab.Raphael.fn.get_string_number(token), "incorrect string number for: '" + token + "'" );
       token = "$2";  expected = 2;
-      assertEqual( expected, Raphael.fn.get_string_number(token), "incorrect string number for: '" + token + "'" );
+      assertEqual( expected, jtab.Raphael.fn.get_string_number(token), "incorrect string number for: '" + token + "'" );
       token = "$3";  expected = 3;
-      assertEqual( expected, Raphael.fn.get_string_number(token), "incorrect string number for: '" + token + "'" );
+      assertEqual( expected, jtab.Raphael.fn.get_string_number(token), "incorrect string number for: '" + token + "'" );
       token = "$4";  expected = 4;
-      assertEqual( expected, Raphael.fn.get_string_number(token), "incorrect string number for: '" + token + "'" );
+      assertEqual( expected, jtab.Raphael.fn.get_string_number(token), "incorrect string number for: '" + token + "'" );
       token = "$5";  expected = 5;
-      assertEqual( expected, Raphael.fn.get_string_number(token), "incorrect string number for: '" + token + "'" );
+      assertEqual( expected, jtab.Raphael.fn.get_string_number(token), "incorrect string number for: '" + token + "'" );
       token = "$6";  expected = 6;
-      assertEqual( expected, Raphael.fn.get_string_number(token), "incorrect string number for: '" + token + "'" );
+      assertEqual( expected, jtab.Raphael.fn.get_string_number(token), "incorrect string number for: '" + token + "'" );
       token = "$e";  expected = 1;
-      assertEqual( expected, Raphael.fn.get_string_number(token), "incorrect string number for: '" + token + "'" );
+      assertEqual( expected, jtab.Raphael.fn.get_string_number(token), "incorrect string number for: '" + token + "'" );
       token = "$B";  expected = 2;
-      assertEqual( expected, Raphael.fn.get_string_number(token), "incorrect string number for: '" + token + "'" );
+      assertEqual( expected, jtab.Raphael.fn.get_string_number(token), "incorrect string number for: '" + token + "'" );
       token = "$G";  expected = 3;
-      assertEqual( expected, Raphael.fn.get_string_number(token), "incorrect string number for: '" + token + "'" );
+      assertEqual( expected, jtab.Raphael.fn.get_string_number(token), "incorrect string number for: '" + token + "'" );
       token = "$D";  expected = 4;
-      assertEqual( expected, Raphael.fn.get_string_number(token), "incorrect string number for: '" + token + "'" );
+      assertEqual( expected, jtab.Raphael.fn.get_string_number(token), "incorrect string number for: '" + token + "'" );
       token = "$A";  expected = 5;
-      assertEqual( expected, Raphael.fn.get_string_number(token), "incorrect string number for: '" + token + "'" );
+      assertEqual( expected, jtab.Raphael.fn.get_string_number(token), "incorrect string number for: '" + token + "'" );
       token = "$E";  expected = 6;
-      assertEqual( expected, Raphael.fn.get_string_number(token), "incorrect string number for: '" + token + "'" );
+      assertEqual( expected, jtab.Raphael.fn.get_string_number(token), "incorrect string number for: '" + token + "'" );
     }},
 
     testRecognizeChordAndTabNotation: function() {  with(this) {

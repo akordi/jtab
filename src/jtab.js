@@ -1,3 +1,6 @@
+const Raphael = require('raphael');
+const jQuery = require('jquery');
+
 /**
  * JTab - Javascript/CSS Guitar Chord and Tab Notation for the Web.
  * Version 1.3.1
@@ -862,7 +865,7 @@ Raphael.fn.tab_note = function (token) {
       this.tab_extend(width);
       for (var i = 0; i < parts.length; i++) {
         var part = parts[i];
-        var string_number = this.get_string_number(part);
+        var string_number = Raphael.fn.get_string_number(part);
         if (string_number != null) {
           this.tab_current_string = string_number;
         } else if (this.tab_current_string > 0) {
@@ -872,7 +875,7 @@ Raphael.fn.tab_note = function (token) {
       this.increment_offset(width);
 
     } else { // just a string setting
-      this.tab_current_string = this.get_string_number(token);
+      this.tab_current_string = Raphael.fn.get_string_number(token);
     }
   } else {
     var fullchord_notes = this.get_fullchord_notes(token);
@@ -1050,5 +1053,6 @@ export {
   Chords,
   WesternScale,
   ChordList,
-  AddChord
+  AddChord,
+  Raphael
 }
