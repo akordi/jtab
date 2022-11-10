@@ -12,4 +12,8 @@ module.exports = {
       type: "var"
     },
   },
+  externals:{
+    "jquery": "jQuery",
+    "raphael": "Raphael"
+  },
 };

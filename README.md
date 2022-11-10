@@ -20,6 +20,13 @@ To host on a custom URL, just two steps:
 * in DNS, configure a CNAME to point to <username>.github.io
 * add a CNAME file to the repo root with the matching CNAME in DNS (GitHub does this for you automatically if you add the custom url in the web interface)
 
+## Building
+
+```sh
+npm install
+npm run build
+```
+
 
 ## Contributing
 
