@@ -1,5 +1,5 @@
-const Raphael = require('raphael');
-const jQuery = require('jquery');
+import Raphael from 'raphael';
+import jQuery from 'jquery';
 
 /**
  * JTab - Javascript/CSS Guitar Chord and Tab Notation for the Web.
