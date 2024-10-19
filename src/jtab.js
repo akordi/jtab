@@ -640,7 +640,7 @@ Raphael.fn.chord_fretboard = function (position, chord_name) {
   this.text( // chord name
     fret_left + 2.5 * this.string_spacing,
     this.margin_top - 20,
-    chord_name).attr({ fill: this.tab_text_color, "font-size": "20px" });
+    chord_name).attr({ fill: this.tab_text_color, "font-size": "20px", "class": "chord-name" });
 
   var stroke_width = position == 0 ? 3 : 0  // nut
   var chord_fretboard_path = this.path(this.svg_params(fret_left, this.margin_top, this.string_spacing * (this.strings_drawn - 1), 0))
@@ -656,7 +656,7 @@ Raphael.fn.chord_fretboard = function (position, chord_name) {
       this.text(
         fret_left + this.fret_width + this.string_spacing * 1.0,
         this.margin_top + ((i - 0.5) * this.fret_spacing),
-        pos).attr({ stroke: this.tab_text_color, "font-size": "12px" });
+        pos).attr({ stroke: this.tab_text_color, "font-size": "12px", "class": "fret-label" });
     }
   }
   for (var i = 0; i < this.strings_drawn; i++) {
@@ -743,13 +743,15 @@ Raphael.fn.chord_note = function (position, string_number, note) {
     // muted/not played
     this.text(fret_left + (string_number - 1) * this.string_spacing, this.margin_top - 8, "x").attr({
       stroke: this.tab_text_color,
-      "font-size": "9px"
+      "font-size": "9px", 
+      "class": "note-muted"
     });
   } else if (fret_number == 0) {
     // open
     this.text(fret_left + (string_number - 1) * this.string_spacing, this.margin_top - 8, "o").attr({
       stroke: this.tab_text_color,
-      "font-size": "9px"
+      "font-size": "9px", 
+      "class": "note-open"
     });
   } else {
     var fret_dy = (fret_number - position - 0.5) * this.fret_spacing;
@@ -759,7 +761,7 @@ Raphael.fn.chord_note = function (position, string_number, note) {
       this.margin_top + fret_dy, this.note_radius).attr({ stroke: this.color, fill: this.color });
     if (!(note[1] === undefined)) {
       this.text(fret_left + (string_number - 1) * this.string_spacing,
-        this.margin_top + fret_dy, note[1]).attr({ fill: this.fingering_text_color, "font-size": "12px" });
+        this.margin_top + fret_dy, note[1]).attr({ fill: this.fingering_text_color, "font-size": "12px", "class": "note-finger" });
     }
   }
 
