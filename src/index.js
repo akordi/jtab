@@ -1,1 +1,1 @@
-export * from './jtab'
+export * from './jtab.js'
